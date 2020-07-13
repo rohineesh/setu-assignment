@@ -4,7 +4,7 @@ const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const CONNECTION_URL = "mongodb+srv://rohineesh:setu123@customer.mh1cu.mongodb.net/retryWrites=true&w=majority";
 const DATABASE_NAME = "customerdb";
-const port = 5022
+const port = process.env.PORT || 8080
 const api = "x-api-key"
 var countOfIds = 1
 var firebase = require("firebase/app");
