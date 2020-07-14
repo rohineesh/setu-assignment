@@ -106,7 +106,7 @@ app.post('/api/v1/payment-update',function(req,res){
                                 countOfIds++;
                                 generateUniqueId(countOfIds, function(uniqueId){
                                     var myquery = { refID: req.body.refID };
-                                    //var newvalues = { $set: {billPaid: true, transId: req.body.transaction.id, ackID: uniqueId, dueAmount: value} };
+                                    var newvalues = { $set: {billPaid: true, transId: req.body.transaction.id, ackID: uniqueId, dueAmount: value} };
                                     collection.updateOne(myquery, newvalues, function(error, response) {
                                         if(error)
                                             return res.status(500).send(error);   
